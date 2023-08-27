@@ -75,14 +75,14 @@ function countEvenNumbersWithin(destination) {
 function celsiusToFahrenheit(arrayOfNumbers) {
   // convert to fahrenheit using the formula (celsius * 9/5 + 32)
   // Then round it to the nearest integer to eliminate decimal
-    const result = arrayOfNumbers.map(celsius => Math.round(celsius * 9/5 + 32));
+    const result = arrayOfNumbers.map(celsius => Math.trunc(celsius * 9/5 + 32));
     return result;
   }
   
-  const celsiusTemperatures = [51.21, 23, 0, -55, 100];
+  const celsiusTemperatures = [20, 25.5, 30.7, 15.2];
   const fahrenheitTemperatures = celsiusToFahrenheit(celsiusTemperatures);
   
-  console.log(fahrenheitTemperatures); // Output: [68, 78, 87, 59]
+  console.log(fahrenheitTemperatures); // Output: [68, 77, 87, 59]
   
 
 assignment.celsiusToFahrenheit = celsiusToFahrenheit;
